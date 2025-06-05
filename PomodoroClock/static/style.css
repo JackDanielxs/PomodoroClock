@@ -1,0 +1,96 @@
+/* Dark background and light text */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#session-type {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #4caf50; /* Green for work */
+  transition: color 0.3s;
+}
+
+
+/* Timer display */
+#timer {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* Progress bar background */
+#progress {
+  width: 300px;
+  height: 25px;
+  background-color: #333;
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Progress bar fill */
+#bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.footer a {
+  color: #4caf50;
+  text-decoration: none;
+  opacity: 0.7;
+  pointer-events: auto;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
