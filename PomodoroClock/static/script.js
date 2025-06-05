@@ -10,17 +10,22 @@ let pomodoroCount = 0; // Counts completed work sessions
 
 function setSessionLabel() {
   const label = document.getElementById("session-type");
+  const bar = document.getElementById("bar");
+
   if (isOnBreak) {
     if (pomodoroCount > 0 && pomodoroCount % 4 === 0) {
       label.textContent = "Long Break";
       label.style.color = "#9c27b0"; // Purple for long break
+      bar.style.backgroundColor = "#9c27b0";
     } else {
       label.textContent = "Break";
       label.style.color = "#03a9f4"; // Blue for short break
+      bar.style.backgroundColor = "#03a9f4";
     }
   } else {
     label.textContent = "Work";
     label.style.color = "#4caf50"; // Green for work
+    bar.style.backgroundColor = "#4caf50";
   }
 }
 
