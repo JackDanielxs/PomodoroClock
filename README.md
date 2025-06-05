@@ -7,14 +7,14 @@ A simple, browser-based Pomodoro timer. It helps you stay focused using the Pomo
 The **Pomodoro Technique** is a time management method that encourages focused work sessions:
 - 25 minutes of focused work (Pomodoro)
 - 5-minute short break
-- After 4 Pomodoros, take a longer break (15–30 minutes)
+- After 4 Pomodoros, take a longer break (15 minutes)
 
 ## 🚀 Features
 
 - 25-minute focus timer
 - Visual progress bar
 - Start and reset controls
-- Minimal and responsive design
+- Minimal design
 - No installation needed — runs in any browser
 
 ## ***🖥️ Languages & Tools used***
@@ -29,4 +29,4 @@ The **Pomodoro Technique** is a time management method that encourages focused w
 
 1. **Clone or download** this repository.
 
-2. **Open** the `pomodoro.html` file in any modern web browser:
+2. **Open** the `index.html` file in any modern web browser:
