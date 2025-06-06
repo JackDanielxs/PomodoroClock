@@ -11,7 +11,7 @@ The **Pomodoro Technique** is a time management method that encourages focused w
 
 ## 🚀 Features
 
-- 25-minute focus timer
+- Work/Break timer
 - Visual progress bar
 - Start and reset controls
 - Minimal design
