@@ -1,6 +1,6 @@
-let workDuration = 25 * 60; // 25 minutes
-let shortBreakDuration = 5 * 60; // 5 minutes
-let longBreakDuration = 15 * 60; // 15 minutes
+let workDuration = 25 * 60; // default 25 minutes
+let shortBreakDuration = 5 * 60; // default 5 minutes
+let longBreakDuration = 15 * 60; // default 15 minutes
 let timeLeft = workDuration;
 
 let timerInterval;
@@ -89,3 +89,26 @@ function resetTimer() {
 }
 
 updateTimer();
+
+const settingsModal = document.getElementById('settings-modal');
+const openSettingsBtn = document.getElementById('open-settings');
+const closeSettingsBtn = document.getElementById('close-settings');
+const settingsForm = document.getElementById('settings-form');
+
+openSettingsBtn.onclick = () => settingsModal.style.display = 'block';
+closeSettingsBtn.onclick = () => settingsModal.style.display = 'none';
+window.onclick = (e) => {
+  if (e.target === settingsModal) settingsModal.style.display = 'none';
+};
+
+settingsForm.onsubmit = function(e) { // Customizable timer settings
+  e.preventDefault();
+  const work = parseFloat(document.getElementById('work-minutes').value, 10);
+  const brk = parseFloat(document.getElementById('break-minutes').value, 10);
+  const longBrk = parseFloat(document.getElementById('long-break-minutes').value, 10);
+  workDuration = work * 60.0;
+  shortBreakDuration = brk * 60.0;
+  longBreakDuration = longBrk * 60.0;
+  resetTimer();
+  settingsModal.style.display = 'none';
+};

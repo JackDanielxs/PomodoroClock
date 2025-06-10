@@ -6,22 +6,49 @@
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-  <div class="container">
-  <h1>
-    <img src="img/tomato.png" alt="Pomodoro Icon" class="icon">
-    Pomodoro Timer
-  </h1>
 
-  <div id="session-type">Work</div>
-  <div id="timer">25:00</div>
-  <div id="progress"><div id="bar"></div></div>
-
-  <div class="button-group">
-    <br>
-    <button onclick="startTimer()">Start</button>
-    <button onclick="resetTimer()">Reset</button>
+  <button id="open-settings" class="settings-btn">⚙️ Customize timer</button>
+  <div class="modal" id="settings-modal">
+    <div class="modal-content">
+      <span class="close" id="close-settings">&times;</span>
+      <h2>Customize timer</h2>
+      <form id="settings-form">
+        <label>
+          Work (min):
+          <input type="number" id="work-minutes" min="0" step="any" value="25">
+        </label>
+        <br><br>
+        <label>
+          Break (min):
+          <input type="number" id="break-minutes" min="0" step="any" value="5">
+        </label>
+        <br><br>
+        <label>
+          Long break (min):
+          <input type="number" id="long-break-minutes" min="0" step="any" value="15">
+        </label>
+        <br><br>
+        <button type="submit">Save</button>
+      </form>
+    </div>
   </div>
-</div>
+
+  <div class="container">
+    <h1>
+      <img src="img/tomato.png" alt="Pomodoro Icon" class="icon">
+      Pomodoro Timer
+    </h1>
+
+    <div id="session-type">Work</div>
+    <div id="timer">25:00</div>
+    <div id="progress"><div id="bar"></div></div>
+
+    <div class="button-group">
+      <br>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+  </div>
 
   <footer class="footer">
     Made by <a href="https://github.com/JackDanielxs" target="_blank">JackDanielxs</a>
